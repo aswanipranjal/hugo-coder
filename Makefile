@@ -1,16 +1,12 @@
-LESS_DIR = ./static/less
-LESS_FILE = style.less
-CSS_DIR = ./static/css
-CSS_FILE = style.min.css
-CSS_TMP_FILE = tmp.css
+HUGO_BIN=hugo
 
+.PHONY: build demo release
 
-.PHONY: clean build
+build:
+	$(HUGO_BIN) --themesDir=../.. --source=exampleSite
 
-build: clean
-	lessc $(LESS_DIR)/$(LESS_FILE) > $(CSS_DIR)/$(CSS_TMP_FILE)
-	uglifycss $(CSS_DIR)/$(CSS_TMP_FILE) > $(CSS_DIR)/$(CSS_FILE)
-	rm -f $(CSS_DIR)/$(CSS_TMP_FILE)
+demo:
+	$(HUGO_BIN) server -D --themesDir=../.. --source=exampleSite --bind 0.0.0.0
 
-clean:
-	rm -f $(CSS_DIR)/*.css
+release: build
+	rm -rf ./resources && cp -r ./exampleSite/resources ./resources

@@ -1,89 +1,53 @@
-# hugo-coder
+<p align="center">
+  <p align="center">
+    <a href="https://themes.gohugo.io/hugo-coder/">
+      <img src="https://img.shields.io/badge/theme-hugo--coder-2b8cbe" alt="Hugo Theme Badge"">
+    </a>
+    <a href="https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.txt">
+      <img src="https://img.shields.io/github/license/luizdepra/hugo-coder.svg" alt="MIT License Badge">
+    </a>
+  </p>
 
-A simple and clean blog theme for Hugo.
+  <p align="center">
+    <a href="https://github.com/luizdepra/hugo-coder">
+      <img src="images/logos/logotype-a.png" alt="Hugo Coder Logo" width="600px" height="184px">
+    </a>
+  </p>
+</p>
 
-![](https://github.com/luizdepra/hugo-coder/blob/master/images/screenshot.png)
+A simple and clean blog theme for [Hugo](https://gohugo.io/).
 
-## How to use this theme
+![](images/screenshot.png)
 
-To use `hugo-coder` go through the following steps.
+## Live Demo
 
-### Download
+See [here](https://hugo-coder.netlify.app/).
 
-Clone this repository into your Hugo project.
+## Quick Start
 
-```
-git clone https://github.com/luizdepra/hugo-coder.git themes/coder
-```
+1. Add the repository into your Hugo Project repository as a submodule, `git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder`.
+2. Configure your `hugo.toml`. You can either use [this minimal configuration](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md#complete-example) as a base, or look for a complete explanation about all configurations [here](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md). The [`hugo.toml`](https://github.com/luizdepra/hugo-coder/blob/master/exampleSite/hugo.toml) inside the [`exampleSite`](https://github.com/luizdepra/hugo-coder/tree/master/exampleSite) is also a good reference.
+3. Build your site with `hugo server` and see the result at `http://localhost:1313/`.
 
-### Configuration
+## Documentation
 
-Add the following lines to your `config.toml`.
-
-```toml
-theme = "coder" # set the theme
-
-[params] # theme parameters
-    author = "John Doe" # author's name
-    info = "Full Stack DevOps and Magician" # author's job title or info
-    description = "John Doe's personal website" # site description
-    keywords = "blog,developer,personal" # site keywords
-    
-# Social links
-[[params.social]]
-    name = "Github"
-    weight = 1
-    url = "https://github.com/johndoe/"
-[[params.social]]
-    name = "Twitter"
-    weight = 2
-    url = "https://twitter.com/johndoe/"
-[[params.social]]
-    name = "LinkedIn"
-    weight = 3
-    url = "https://www.linkedin.com/in/johndoe/"
-
-# Menu links
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/posts/"
-[[menu.main]]
-    name = "About"
-    weight = 2
-    url = "/about/"
-```
-
-You can look at full working [`config.toml`](https://github.com/luizdepra/hugo-coder/blob/master/exampleSite/config.toml) inside the [exampleSite](https://github.com/luizdepra/hugo-coder/tree/master/exampleSite) folder.
-
-### Build & Test
-
-To update or generate the minified CSS file:
-
-```
-make build
-```
-
-To build your site and test, run:
-
-```
-hugo server
-```
-
-## To Do
-
-- Comments (probably not Disqus, sorry)
-- Tags, Categories and Series
+See the [`docs`](docs/home.md) folder.
 
 ## License
 
 Coder is licensed under the [MIT license](https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.md).
 
-## Author
+## Maintenance
 
-[Luiz de Prá](https://luizdepra.com)
+This theme is maintained by its author [Luiz de Prá](https://github.com/luizdepra) with the help from these awesome [contributors](CONTRIBUTORS.md).
+
+## Sponsoring
+
+If you like my project or it was useful for you, consider supporting its development. Just:
+
+<a href="https://www.buymeacoffee.com/luizdepra" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Special Thanks
 
-- Gleen McComb, for his great [article](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) about custom pagination.
-- All contributors, for every PR and Issue reported.
+-   Gleen McComb, for his great [article](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) about custom pagination.
+-   All contributors, for every PR and Issue reported.
